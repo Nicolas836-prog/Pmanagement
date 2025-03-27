@@ -136,7 +136,11 @@ body {
     <h3>Saved Passwords</h3>
     <div class="password-list" id="password-list"></div>
 </div>
-
+<div class="password-list hidden" id="password-list"> 
+<h3>Your Passwords</h3>
+<div id="password-items"></div>
+<button onclick="logout()">Logout</button>
+</div>
 <script>
     function toggleTheme() {
     const currentTheme = localStorage.getItem("theme");
@@ -221,6 +225,16 @@ window.onload = () => {
             passwordList.appendChild(item);
         }
     }
+
+function logout() {
+// Clear session and show login container
+document.getElementById("login-container").classList.remove("hidden");
+document.getElementById("password-list").classList.add("hidden");
+document.getElementById("register-container").classList.add("hidden");
+// Clear input fields
+document.getElementById("email").value = '';
+document.getElementById("password").value = '';
+}
 
     function deletePassword(website) {
         const savedPasswords = JSON.parse(localStorage.getItem('passwords'));

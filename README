@@ -1,0 +1,84 @@
+Password Manager SPA
+
+A secure, single-page application for managing your passwords with built-in password generation capabilities.
+
+Features
+
+- User authentication (login/signup)
+- Secure password storage with encryption
+- Password strength evaluation
+- Password generator with customizable options
+- Search functionality for stored passwords
+- Responsive design
+
+
+Usage Guide
+
+ 1. Account Creation
+
+1. Click on the "Sign Up" tab
+2. Enter a username and password
+3. Confirm your password
+4. The password strength meter will show how strong your password is
+5. Click "Sign Up" to create your account
+
+2. Logging In
+
+1. Enter your username and password
+2. Click "Login"
+3. You'll be taken to the main password manager interface
+
+3. Main Interface Navigation
+
+The app has three main tabs:
+
+Add New Tab
+- Add new password entries:
+  - Enter the website/application name
+  - Enter the username/email
+  - Enter the password (or generate one using the Generator tab)
+  - Click "Add Password" to save
+
+Saved Tab
+- View all your saved passwords in a table
+- Search for specific passwords using the search box
+- Click the eye icon to reveal/hide a password
+- Click the trash icon to delete a password
+
+Generator Tab
+- Generate secure passwords with options to:
+  - Include uppercase letters (A-Z)
+  - Include lowercase letters (a-z)
+  - Include numbers (0-9)
+  - Include special characters (!@#$%)
+  - Adjust password length (4-50 characters)
+- Generated passwords include strength evaluation
+- Click "Copy" to copy the password to clipboard
+- Click "Use This Password" to automatically fill it in the "Add New" form
+
+4. Logging Out
+
+Click the "Logout" button in the top right corner to securely log out of your account.
+
+5. Security Notes
+
+- All passwords are encrypted before being stored
+- Your data is saved in your browser's localStorage
+- The app includes password strength evaluation to help you create secure passwords
+- Always log out when using shared devices
+
+6. Technical details
+
+- Password encryption
+- When adding a password, a random salt is generated
+- A key is derived from your credentials using PBKDF2
+- Your password is encrypted using AES-256 with the derived key
+- Only the encrypted version and salt are stored
+
+7. Browser Compatibility
+
+The app should work in all modern browsers including:
+- Chrome
+- Firefox
+- Safari
+- Edge

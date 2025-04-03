@@ -1,0 +1,202 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #ffeb3b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.5);
+    width: 500px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #ffeb3b;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tabs, .app-tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab, .app-tab {
+    flex: 1;
+    padding: 10px;
+    background-color: #333;
+    color: #ffeb3b;
+    border: none;
+    cursor: pointer;
+}
+
+.tab.active, .app-tab.active {
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ffeb3b;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffeb3b;
+}
+
+.password-input {
+    display: flex;
+    gap: 5px;
+}
+
+.password-input input {
+    flex: 1;
+}
+
+.password-input button {
+    width: auto;
+    padding: 10px;
+    background: transparent;
+    color: #ffeb3b;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    background-color: #ffeb3b;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ffc107;
+}
+
+.password-strength {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.strength-meter {
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.strength-meter::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.strength-text {
+    font-size: 12px;
+}
+
+.password-list {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+}
+
+.password-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.password-actions button {
+    background: transparent;
+    color: #ffeb3b;
+    padding: 5px;
+    border: none;
+}
+
+.password-actions button:hover {
+    color: #ffc107;
+}
+
+.generator-container {
+    margin-top: 20px;
+}
+
+.generator-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.generated-password {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.generated-password input {
+    flex: 1;
+}
+
+.app-tab-content {
+    display: none;
+}
+
+.app-tab-content.active {
+    display: block;
+}
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+.view {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+input:invalid {
+    border-color: #ff4444;
+}

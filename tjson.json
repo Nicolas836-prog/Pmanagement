@@ -1,0 +1,45 @@
+{
+    "appSettings": {
+      "defaultPasswordLength": 12,
+      "minPasswordLength": 8,
+      "maxPasswordLength": 32,
+      "requireStrongPasswords": true,
+      "passwordStrengthThreshold": 4
+    },
+    "encryptionSettings": {
+      "keyIterations": 1000,
+      "keySize": 512,
+      "encryptionAlgorithm": "AES",
+      "encryptionMode": "CBC",
+      "padding": "Pkcs7"
+    },
+    "uiSettings": {
+      "defaultActiveTab": "add",
+      "passwordMaskChar": "•",
+      "passwordMaskLength": 8,
+      "strengthColors": {
+        "weak": "#ff4444",
+        "medium": "#ffc107",
+        "strong": "#4CAF50"
+      }
+    },
+    "messages": {
+      "errors": {
+        "cryptoJsNotLoaded": "Error: CryptoJS library not loaded. Password encryption unavailable.",
+        "localStorageNotAvailable": "Warning: LocalStorage is not available. Your data will not be saved.",
+        "passwordSaveError": "Error saving password. Please try again."
+      },
+      "alerts": {
+        "loginRequired": "Please login first",
+        "fieldsRequired": "Please fill in all fields",
+        "passwordsDontMatch": "Passwords do not match",
+        "usernameTaken": "Username already exists",
+        "weakPassword": "Password too weak. Include uppercase, lowercase, numbers and special characters"
+      },
+      "success": {
+        "signupComplete": "Sign up successful! Please login",
+        "passwordSaved": "Password saved successfully!",
+        "passwordCopied": "Password copied to clipboard!"
+      }
+    }
+  }
